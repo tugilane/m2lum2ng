@@ -1,0 +1,65 @@
+body {
+  background-image: url("assets/southparkwallpaper.jpeg");
+}
+
+section {
+  display: flex;
+}
+
+.headers {
+margin-left: 5rem;
+}
+
+h1 {
+  color: lightgray;
+  font-family: "Fredoka";
+}
+
+h2 {
+  color: lightgray;
+  font-family: "Fredoka";
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(8, 120px);
+    grid-template-rows: repeat(6, 120px);
+    grid-gap: 5px;
+    box-sizing: content-box;
+    margin-left: 47rem;
+    max-width: 1214px; 
+  }
+  
+.card {
+        background-color: lightgray;
+    border: black solid 1px;
+}
+
+.icon {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+
+  }
+
+/* CSS for hiding cards and notification */ 
+  .hidden {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .visible {
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+
+.notification {
+  color: red;  
+  font-family: "Fredoka";
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+
+
+
