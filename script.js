@@ -106,7 +106,7 @@ function displayCards() {
   for (let i = 0; i < cards.length; i++) {
     let cardElement = document.createElement("div");
     cardElement.innerHTML = createCard(cards[i]);
-    cardElement.classList.add("card");
+    cardElement.classList.add("cardbody");
     outputElement.appendChild(cardElement);
   }
 }
