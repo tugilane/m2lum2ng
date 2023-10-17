@@ -2,7 +2,7 @@ let cards = [];
 let pairs = [];
 
 // creating the pairs 
-for (let i = 1; i <= 24; i++) {
+for (let i = 1; i <= 13; i++) {
   let card = {
     icon: `./assets/picture${i}.png`,
     id: i
@@ -35,9 +35,6 @@ let card1 = null;
 let card2 = null;
 
 function showPicture(element) {
-  if (element.getAttribute("data-pairMatch") === "match") {
-    return;
-  }
 
   element.classList.remove('hidden');
   element.classList.add('visible');
@@ -53,6 +50,7 @@ function showPicture(element) {
       card1 = null;
       card2 = null;
     } else {
+   
       setTimeout(function() { 
         if (card1 !== null && card2 !== null) {
           card1.classList.remove('visible');
@@ -62,7 +60,7 @@ function showPicture(element) {
           card1 = null;
           card2 = null;
         }
-      }, 300);
+      }, 600);
     }
   }
 
