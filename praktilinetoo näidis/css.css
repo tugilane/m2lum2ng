@@ -1,0 +1,54 @@
+  /* Päises asuvad pealkirjad */
+  .headers {
+    margin-left: 5rem;
+    color: lightgray;
+    font-family: "Fredoka";
+  }
+  
+  /* Põhiosas asuv mängukaartide ruudustik */
+  .grid-container {
+      display: grid;
+      grid-template-columns: repeat(6, 120px);
+      grid-template-rows: repeat(6, 120px);
+      grid-gap: 5px;
+      box-sizing: content-box;
+      margin-left: 47rem;
+      max-width: 1214px; 
+    }
+    
+  .cardbody {
+      background-color: rgb(231, 231, 231);
+      border: black solid 1px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .icon {
+      width: 90px;
+      height: 90px;
+      padding: 15px;
+    }
+  
+  /* CSS for hiding cards and notification */ 
+    .hidden {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .visible {
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+  
+  .notification {
+    color: red;  
+    font-family: "Fredoka";
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    }
+  
+  
+  
+  
+  

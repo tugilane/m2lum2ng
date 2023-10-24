@@ -1,24 +1,12 @@
-section {
-  display: flex;
-}
-
 .headers {
-margin-left: 5rem;
-}
-
-h1 {
-  color: lightgray;
-  font-family: "Fredoka";
-}
-
-h2 {
+  margin-left: 5rem;
   color: lightgray;
   font-family: "Fredoka";
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(8, 120px);
+    grid-template-columns: repeat(6, 120px);
     grid-template-rows: repeat(6, 120px);
     grid-gap: 5px;
     box-sizing: content-box;

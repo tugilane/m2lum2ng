@@ -2,7 +2,7 @@ let cards = [];
 let pairs = [];
 
 // creating the pairs 
-for (let i = 1; i <= 13; i++) {
+for (let i = 1; i <= 15; i++) {
   let card = {
     icon: `./assets/picture${i}.png`,
     id: i
@@ -35,7 +35,6 @@ let card1 = null;
 let card2 = null;
 
 function showPicture(element) {
-
   element.classList.remove('hidden');
   element.classList.add('visible');
 
