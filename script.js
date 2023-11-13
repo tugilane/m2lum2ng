@@ -59,7 +59,7 @@ function showPicture(element) {
           card1 = null;
           card2 = null;
         }
-      }, 600);
+      }, 500);
     }
   }
 
@@ -85,8 +85,8 @@ function checkCard(card1, card2) {
 // show text when pair found
 let notification1 = document.getElementById("notification"); 
 function showNotification(){
- if (pairs.length === 48 ) {
-  notification1.textContent = "Palju Õnne, võitsid mängu!!!";
+ if (pairs.length === 30 ) {
+  notification1.textContent = "Palju Õnne, võitsid mängu!";
   notification1.classList.remove('hidden')
   notification1.classList.add('visible')
  } else {
