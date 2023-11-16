@@ -1,7 +1,12 @@
+  /* taust */
+  body {
+  background-color:lightblue ;
+  }
+
   /* Päises asuvad pealkirjad */
   .headers {
     margin-left: 5rem;
-    color: lightgray;
+    color: green;
     font-family: "Fredoka";
   }
   
@@ -16,39 +21,6 @@
       max-width: 1214px; 
     }
     
-  .cardbody {
-      background-color: rgb(231, 231, 231);
-      border: black solid 1px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  
-  .icon {
-      width: 90px;
-      height: 90px;
-      padding: 15px;
-    }
-  
-  /* CSS for hiding cards and notification */ 
-    .hidden {
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    .visible {
-      opacity: 1;
-      transition: opacity 0.3s;
-    }
-  
-  .notification {
-    color: red;  
-    font-family: "Fredoka";
-    font-weight: bold;
-    margin-left: auto;
-    margin-right: auto;
-    }
-  
-  
   
   
   
