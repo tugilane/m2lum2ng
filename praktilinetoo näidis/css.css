@@ -21,6 +21,19 @@
       max-width: 1214px; 
     }
     
+    /* Kaartide suurused ja välimus */
+    .cardbody {
+      background-color: rgb(231, 231, 231);
+      border: black solid 1px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
   
+  .icon {
+      width: 90px;
+      height: 90px;
+      padding: 15px;
+    }
   
   
