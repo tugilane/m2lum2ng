@@ -82,7 +82,7 @@ function checkCard(card1, card2) {
   }
 } 
 
-// show text when pair found
+// Näita teksti kui leitakse paar
 let notification1 = document.getElementById("notification"); 
 function showNotification(){
  if (pairs.length === 30 ) {
