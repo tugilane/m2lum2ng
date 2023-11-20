@@ -36,7 +36,7 @@
       padding: 15px;
     }
 
-    /* CSS for hiding cards and notification */ 
+    /* peida või too nähtavale CSS */ 
   .hidden {
     opacity: 0;
     transition: opacity 0.3s;
