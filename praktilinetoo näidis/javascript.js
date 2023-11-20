@@ -24,7 +24,7 @@ function shuffleArray(array) {
   // Kaardi HTML
 function createCard(card) {
     return `
-      <img onclick="showPicture(this)" data-pairId="${card.id}" class="hidden icon" src="${card.icon}">
+      <img data-pairId="${card.id}" class="hidden icon" src="${card.icon}">
     `;
   }
 
