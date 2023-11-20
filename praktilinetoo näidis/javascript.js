@@ -66,7 +66,7 @@ function createCard(card) {
     element = null;
   }
   
-  // Check for a pair function
+  // Kaardi kontrollfunktsioon
   function checkCard(card1, card2) {
     if (card1.getAttribute("data-pairId") === card2.getAttribute("data-pairId")) {
       card1.dataset.pairMatch = "match";
