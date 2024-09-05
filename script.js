@@ -1,7 +1,7 @@
 let cards = [];
 let pairs = [];
 
-// creating the pairs 
+// Loon paaris kaartide elemendid
 for (let i = 1; i <= 15; i++) {
   let card = {
     icon: `./assets/picture${i}.png`,
@@ -11,7 +11,7 @@ for (let i = 1; i <= 15; i++) {
   cards.push({ ...card });
 }
 
-// Shuffling the cards with Fisher-Yates shuffle algorithm
+// Segan kaartide elemendid Fisher-Yates'i segamise algoritmiga
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -23,66 +23,67 @@ function shuffleArray(array) {
 let shuffledArray = shuffleArray(cards);
 console.log(shuffledArray);
 
-// Creating card HTML
+// Loon kaardi HTML koodi, kaardi struktuuri jaoks
 function createCard(card) {
   return `
     <img onclick="showPicture(this)" data-pairId="${card.id}" class="hidden icon" src="${card.icon}">
   `;
 }
 
-// Game logic
-let card1 = null;
-let card2 = null;
+// Mänguloogika
 
-function showPicture(element) {
-  element.classList.remove('hidden');
-  element.classList.add('visible');
-
-  if (!card1) {
-    card1 = element;
-  } else {
-    card2 = element;
-    let result = checkCard(card1, card2);
-    if (result) {
-      // alert match
-      showNotification()
-      card1 = null;
-      card2 = null;
+  let card1 = null;
+  let card2 = null;
+  // Funktsioon kaardi nähtavale toomiseks
+  function showPicture(element) {
+    element.classList.remove('hidden');
+    element.classList.add('visible');
+    // Kui kaart 1 pole määratud, vajutatu = kaart1 else kaart 2.
+    // Kui mõlemad kaardid määratud siis aktiveerub paarikontroll
+    if (!card1) {
+      card1 = element;
     } else {
-   
-      setTimeout(function() { 
-        if (card1 !== null && card2 !== null) {
-          card1.classList.remove('visible');
-          card1.classList.add('hidden');
-          card2.classList.remove('visible');
-          card2.classList.add('hidden');
-          card1 = null;
-          card2 = null;
-        }
-      }, 500);
+      card2 = element;
+      let result = checkCard(card1, card2);
+      // Näitab teadet kui leiti paar. Tühjendab kaart1 ja kaart2 muutujad, kui polnud kaartide paar siis timer ja haihtub
+      if (result) {
+        showNotification()
+        card1 = null;
+        card2 = null;
+      } else {
+        setTimeout(function() { 
+          if (card1 !== null && card2 !== null) {
+            card1.classList.remove('visible');
+            card1.classList.add('hidden');
+            card2.classList.remove('visible');
+            card2.classList.add('hidden');
+            card1 = null;
+            card2 = null;
+          }
+        }, 500);
+      }
     }
+
+    element = null;
   }
 
-  element = null;
-}
+  // Paarikontroll. pmst kui paar leitud: võrdled kaartide datat ja lisad datat ja kaotad vajutamise funkstiooni ja lisad leitud paaride nimekirja
+  function checkCard(card1, card2) {
+    if (card1.getAttribute("data-pairId") === card2.getAttribute("data-pairId")) {
+      card1.dataset.pairMatch = "match";
+      card2.dataset.pairMatch = "match";
+      card1.removeAttribute("onclick");
+      card2.removeAttribute("onclick");
+      pairs.push(card1);
+      pairs.push(card2);
+      console.log(pairs)
+      return true;
+    } else {
+      return false;
+    }
+  } 
 
-// Check for a pair function
-function checkCard(card1, card2) {
-  if (card1.getAttribute("data-pairId") === card2.getAttribute("data-pairId")) {
-    card1.dataset.pairMatch = "match";
-    card2.dataset.pairMatch = "match";
-    card1.removeAttribute("onclick");
-    card2.removeAttribute("onclick");
-    pairs.push(card1);
-    pairs.push(card2);
-    console.log(pairs)
-    return true;
-  } else {
-    return false;
-  }
-} 
-
-// show text when pair found
+// Teated. pmst kui paaride nimekiri fullis ütleb, et võitsid. Kui leiad ns paari siis toob teise teate nähtavale ja peidab taimeriga
 let notification1 = document.getElementById("notification"); 
 function showNotification(){
  if (pairs.length === 30 ) {
@@ -99,7 +100,7 @@ function showNotification(){
 }
 }
 
-// Display the cards
+// Sisestab HTML ja kaartide andme elementidest kaardid, index faili div sisse 
 function displayCards() {
   let outputElement = document.querySelector(".grid-container");
   for (let i = 0; i < cards.length; i++) {

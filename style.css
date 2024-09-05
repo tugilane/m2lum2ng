@@ -1,5 +1,5 @@
 body {
-  background-color:lightblue ;
+background-color:lightblue ;
 }
 
 .headers {
@@ -8,6 +8,7 @@ body {
   font-family: "Fredoka";
 }
 
+/* Kaartide ruudustik */ 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(6, 120px);
@@ -16,7 +17,8 @@ body {
     box-sizing: content-box;
     margin-left: 40%;
   }
-  
+
+/* Kaardi ehitus */ 
 .cardbody {
     background-color: rgb(231, 231, 231);
     border: black solid 1px;
@@ -25,13 +27,14 @@ body {
     align-items: center;
 }
 
+/* Kaartide piltidele määratud suurus */ 
 .icon {
     width: 90px;
     height: 90px;
     padding: 15px;
   }
 
-/* CSS for hiding cards and notification */ 
+/* Kaartide ja teadete peitmiseks */ 
   .hidden {
     opacity: 0;
     transition: opacity 0.3s;
@@ -41,6 +44,7 @@ body {
     transition: opacity 0.3s;
   }
 
+  /* Teade mänguplatsi üleval */ 
 .notification {
   color: red;  
   font-family: "Fredoka";
