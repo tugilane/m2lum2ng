@@ -63,7 +63,7 @@ h2 {
   }
 
   /* Väiksemate ekraanide puhul (1200 laius) */
-  @media (max-width: 1200px) {
+  @media (max-width: 1350px) {
     h1 {
       font-size: 40px;
     }
