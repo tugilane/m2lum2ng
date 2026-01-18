@@ -1,2 +1,2 @@
 # Projekt m2lum2ng
-Javascript praktiseerimise projekt HTML injectioniga
+Javascript projekt HTML injectioniga. Vajuta kaartidele, leia paarid.
